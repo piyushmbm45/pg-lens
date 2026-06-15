@@ -1,0 +1,10 @@
+src/
+tests/
+docker/
+docker-compose.yml
+.env.example
+.eslintrc*
+eslint.config.mjs
+.prettierrc*
+tsconfig.json
+*.zip
