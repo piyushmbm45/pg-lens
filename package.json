@@ -1,6 +1,6 @@
 {
   "name": "@piyushmbm45/pg-lens",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "bin": {
     "pg-lens": "./dist/cli/index.js"
   },
