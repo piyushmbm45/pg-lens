@@ -1,11 +1,11 @@
 {
-  "name": "pg-lens",
+  "name": "@piyushmbm45/pg-lens",
   "version": "0.1.0",
-  "description": "A CLI + API toolkit to analyze and optimize PostgreSQL performance",
-  "main": "dist/index.js",
   "bin": {
     "pg-lens": "./dist/cli/index.js"
   },
+  "description": "A CLI + API toolkit to analyze and optimize PostgreSQL performance",
+  "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
     "dev": "ts-node src/cli/index.ts",

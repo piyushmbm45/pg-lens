@@ -13,9 +13,7 @@ const program = new Command();
 
 program
   .name('pg-lens')
-  .description(
-    'PostgreSQL Performance Toolkit — find slow queries, missing indexes, and table bloat',
-  )
+  .description('PostgreSQL Performance Toolkit')
   .version('0.1.0')
   .option(
     '--host <host>',

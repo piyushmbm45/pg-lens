@@ -11,7 +11,7 @@ Find slow queries, missing indexes, table bloat, and unused indexes — with act
 | Command           | What it does                                                |
 | ----------------- | ----------------------------------------------------------- |
 | `slow-queries`    | Top N slowest queries from `pg_stat_statements`             |
-| `missing-indexes` | Tables with high sequential scans _(Week 2)_                |
+| `missing-indexes` | Tables with high sequential scans `pg_stat_user_indexes`    |
 | `bloat`           | Table and index bloat analysis _(Week 2)_                   |
 | `unused-indexes`  | Indexes that are never used _(Week 2)_                      |
 | `explain`         | Run and parse `EXPLAIN ANALYZE` with suggestions _(Week 3)_ |
