@@ -5,6 +5,7 @@ import * as dotenv from 'dotenv';
 import { createPool, testConnection } from '../db/connection';
 import { slowQueriesCommand } from './commands/slow-queries';
 import { printHeader, printError, printSuccess } from '../utils/formatter';
+import { indexesCommand } from './commands/indexes';
 
 dotenv.config();
 
@@ -22,7 +23,11 @@ program
     process.env.PG_HOST || 'localhost',
   )
   .option('--port <port>', 'PostgreSQL port', process.env.PG_PORT || '5432')
-  .option('--db <database>', 'Database name', process.env.PG_DATABASE || 'postgres')
+  .option(
+    '--db <database>',
+    'Database name',
+    process.env.PG_DATABASE || 'postgres',
+  )
   .option('--user <user>', 'Database user', process.env.PG_USER || 'postgres')
   .option('--password <password>', 'Database password', process.env.PG_PASSWORD)
   .option('--url <url>', 'Full connection string (overrides other options)')
@@ -55,6 +60,7 @@ program
 
 // Register commands
 slowQueriesCommand(program);
+indexesCommand(program);
 
 // Connect command — just tests the connection
 program
